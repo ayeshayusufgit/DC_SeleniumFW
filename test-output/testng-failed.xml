@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Democart Automation REgression Suite]" guice-stage="DEVELOPMENT" verbose="3">
+  <listeners>
+    <listener class-name="com.democart.listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Accounts Page Test(failed)" verbose="3">
+    <classes>
+      <class name="com.democart.tests.AccountsPageTest">
+        <methods>
+          <include name="accountPageSetup"/>
+          <include name="tearDown"/>
+          <include name="searchTest" invocation-numbers="0 4 5"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.democart.tests.AccountsPageTest -->
+    </classes>
+  </test> <!-- Accounts Page Test(failed) -->
+</suite> <!-- Failed suite [Democart Automation REgression Suite] -->
