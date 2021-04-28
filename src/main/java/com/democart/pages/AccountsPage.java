@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import com.democart.utils.Constants;
 import com.democart.utils.ElementUtil;
 
+//Some comments
 public class AccountsPage {
 	private WebDriver driver;
 	private ElementUtil elementUtil;
