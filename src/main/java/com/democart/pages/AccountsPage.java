@@ -10,8 +10,6 @@ import org.openqa.selenium.WebElement;
 import com.democart.utils.Constants;
 import com.democart.utils.ElementUtil;
 
-import jdk.internal.misc.FileSystemOption;
-
 public class AccountsPage {
 	private WebDriver driver;
 	private ElementUtil elementUtil;
