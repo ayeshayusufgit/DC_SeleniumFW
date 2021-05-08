@@ -4,7 +4,7 @@ agent any
         
         stage ('Build') { 
             steps{
-                echo "Building the test automation for demo cart app"
+                echo "Building the test automation for Democart App"
 
             }
         }
