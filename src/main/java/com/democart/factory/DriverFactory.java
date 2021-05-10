@@ -19,7 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverFactory {
 
 	public WebDriver driver;
-	// Threadlocal concept needs to be applied on WebDriver
+	// Threadlocal concept needs to be applied on WebDriver,this is for the Democart project
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
 	public WebDriver init_driver(Properties prop) {
