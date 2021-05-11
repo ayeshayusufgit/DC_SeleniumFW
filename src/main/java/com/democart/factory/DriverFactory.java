@@ -79,7 +79,7 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability("browserName", "chrome");
-			
+
 			try {
 				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
 				// tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
@@ -112,7 +112,7 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public String getScreenshot() {
+	public String getScreenshot_backup() {
 		FileInputStream fileInputStream = null;
 		String encodedBase64 = null;
 
@@ -136,7 +136,7 @@ public class DriverFactory {
 		return "data:image/png;base64," + encodedBase64;
 	}
 
-	public String getScreenshot_backup() {
+	public String getScreenshot() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File dest = new File(filePath);
