@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="20" passed="9" failed="11" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-11T12:22:54Z" name="Democart Automation REgression Suite" finished-at="2021-05-11T12:25:10Z" duration-ms="135601">
+  <suite started-at="2021-05-11T14:22:16Z" name="Democart Automation REgression Suite" finished-at="2021-05-11T14:25:03Z" duration-ms="166264">
     <groups>
     </groups>
-    <test started-at="2021-05-11T12:22:54Z" name="Accounts Page Test" finished-at="2021-05-11T12:23:24Z" duration-ms="30267">
+    <test started-at="2021-05-11T14:22:16Z" name="Accounts Page Test" finished-at="2021-05-11T14:22:54Z" duration-ms="38109">
       <class name="com.democart.tests.AccountsPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:22:54Z" name="setUp" finished-at="2021-05-11T12:23:04Z" duration-ms="9809" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:16Z" name="setUp" finished-at="2021-05-11T14:22:37Z" duration-ms="20730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="accountPageSetup()[pri:0, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:04Z" name="accountPageSetup" finished-at="2021-05-11T12:23:09Z" duration-ms="5444" status="PASS">
+        <test-method is-config="true" signature="accountPageSetup()[pri:0, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:37Z" name="accountPageSetup" finished-at="2021-05-11T14:22:43Z" duration-ms="5636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountPageSetup -->
-        <test-method signature="accountsPageTitleTest()[pri:1, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:09Z" name="accountsPageTitleTest" finished-at="2021-05-11T12:23:10Z" duration-ms="341" status="PASS">
+        <test-method signature="accountsPageTitleTest()[pri:1, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:43Z" name="accountsPageTitleTest" finished-at="2021-05-11T14:22:43Z" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountsPageTitleTest -->
-        <test-method signature="accountsSectionCountTest()[pri:2, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:10Z" name="accountsSectionCountTest" finished-at="2021-05-11T12:23:10Z" duration-ms="54" status="PASS">
+        <test-method signature="accountsSectionCountTest()[pri:2, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:43Z" name="accountsSectionCountTest" finished-at="2021-05-11T14:22:43Z" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountsSectionCountTest -->
-        <test-method signature="accountsSectionTextTest()[pri:3, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:10Z" name="accountsSectionTextTest" finished-at="2021-05-11T12:23:10Z" duration-ms="146" status="PASS">
+        <test-method signature="accountsSectionTextTest()[pri:3, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:43Z" name="accountsSectionTextTest" finished-at="2021-05-11T14:22:43Z" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountsSectionTextTest -->
-        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:12Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T12:23:13Z" duration-ms="1501" status="FAIL">
+        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:43Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T14:22:44Z" duration-ms="1379" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -72,7 +72,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:14Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T12:23:16Z" duration-ms="1816" status="PASS">
+        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:45Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T14:22:46Z" duration-ms="1704" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:16Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T12:23:17Z" duration-ms="1811" status="PASS">
+        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:46Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T14:22:48Z" duration-ms="1586" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,7 +94,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:17Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T12:23:19Z" duration-ms="2006" status="PASS">
+        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:48Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T14:22:50Z" duration-ms="1715" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,7 +105,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:19Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T12:23:21Z" duration-ms="1517" status="FAIL">
+        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:50Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T14:22:51Z" duration-ms="1277" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -150,7 +150,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:21Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T12:23:23Z" duration-ms="1361" status="FAIL">
+        <test-method signature="searchTest(java.lang.String)[pri:4, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:51Z" name="searchTest" data-provider="getProductSearchData" finished-at="2021-05-11T14:22:53Z" duration-ms="1296" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -195,23 +195,23 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.AccountsPageTest@1fc713c9]" started-at="2021-05-11T12:23:23Z" name="tearDown" finished-at="2021-05-11T12:23:24Z" duration-ms="1433" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.AccountsPageTest@44fff386]" started-at="2021-05-11T14:22:53Z" name="tearDown" finished-at="2021-05-11T14:22:54Z" duration-ms="1703" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.democart.tests.AccountsPageTest -->
     </test> <!-- Accounts Page Test -->
-    <test started-at="2021-05-11T12:22:54Z" name="Register Page Test" finished-at="2021-05-11T12:24:00Z" duration-ms="65631">
+    <test started-at="2021-05-11T14:22:16Z" name="Register Page Test" finished-at="2021-05-11T14:23:00Z" duration-ms="43971">
       <class name="com.democart.tests.RegisterPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:22:54Z" name="setUp" finished-at="2021-05-11T12:23:33Z" duration-ms="38632" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:16Z" name="setUp" finished-at="2021-05-11T14:22:35Z" duration-ms="18632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:33Z" name="registerPageSetup" finished-at="2021-05-11T12:23:36Z" duration-ms="2772" status="PASS">
+        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:39Z" name="registerPageSetup" finished-at="2021-05-11T14:22:40Z" duration-ms="1487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageSetup -->
-        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:36Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T12:23:40Z" duration-ms="4329" status="FAIL">
+        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:41Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T14:22:45Z" duration-ms="4108" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -225,7 +225,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
             </param>
             <param index="2">
               <value>
-                <![CDATA[ibu10@gmail.com]]>
+                <![CDATA[ibu11@gmail.com]]>
               </value>
             </param>
             <param index="3">
@@ -281,11 +281,11 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationTest -->
-        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:40Z" name="registerPageSetup" finished-at="2021-05-11T12:23:42Z" duration-ms="1678" status="PASS">
+        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:45Z" name="registerPageSetup" finished-at="2021-05-11T14:22:46Z" duration-ms="1086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageSetup -->
-        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:42Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T12:23:46Z" duration-ms="3967" status="FAIL">
+        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:46Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T14:22:50Z" duration-ms="3446" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -299,7 +299,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
             </param>
             <param index="2">
               <value>
-                <![CDATA[deepti.kharbanda10@gmail.com]]>
+                <![CDATA[deepti.kharbanda11@gmail.com]]>
               </value>
             </param>
             <param index="3">
@@ -355,11 +355,11 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationTest -->
-        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:46Z" name="registerPageSetup" finished-at="2021-05-11T12:23:48Z" duration-ms="1558" status="PASS">
+        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:50Z" name="registerPageSetup" finished-at="2021-05-11T14:22:51Z" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageSetup -->
-        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:48Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T12:23:52Z" duration-ms="4122" status="FAIL">
+        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:51Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T14:22:54Z" duration-ms="3156" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -373,7 +373,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
             </param>
             <param index="2">
               <value>
-                <![CDATA[kartika.varma10@gmail.com]]>
+                <![CDATA[kartika.varma11@gmail.com]]>
               </value>
             </param>
             <param index="3">
@@ -429,11 +429,11 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationTest -->
-        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:53Z" name="registerPageSetup" finished-at="2021-05-11T12:23:54Z" duration-ms="1601" status="PASS">
+        <test-method is-config="true" signature="registerPageSetup()[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:54Z" name="registerPageSetup" finished-at="2021-05-11T14:22:56Z" duration-ms="1207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerPageSetup -->
-        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:54Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T12:23:58Z" duration-ms="3834" status="FAIL">
+        <test-method signature="registrationTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:56Z" name="registrationTest" data-provider="getRegisterationData" finished-at="2021-05-11T14:22:59Z" duration-ms="3004" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -447,7 +447,7 @@ at java.base/java.lang.Thread.run(Thread.java:832)
             </param>
             <param index="2">
               <value>
-                <![CDATA[kavita.kharbanda10@gmail.com]]>
+                <![CDATA[kavita.kharbanda11@gmail.com]]>
               </value>
             </param>
             <param index="3">
@@ -503,31 +503,31 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.RegisterPageTest@43acd79e]" started-at="2021-05-11T12:23:58Z" name="tearDown" finished-at="2021-05-11T12:24:00Z" duration-ms="1458" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.RegisterPageTest@3a790e40]" started-at="2021-05-11T14:22:59Z" name="tearDown" finished-at="2021-05-11T14:23:00Z" duration-ms="1492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.democart.tests.RegisterPageTest -->
     </test> <!-- Register Page Test -->
-    <test started-at="2021-05-11T12:22:54Z" name="Login Page Test" finished-at="2021-05-11T12:25:10Z" duration-ms="135568">
+    <test started-at="2021-05-11T14:22:16Z" name="Login Page Test" finished-at="2021-05-11T14:25:03Z" duration-ms="166263">
       <class name="com.democart.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:22:54Z" name="setUp" finished-at="2021-05-11T12:24:08Z" duration-ms="73453" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:22:16Z" name="setUp" finished-at="2021-05-11T14:22:38Z" duration-ms="21616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loginPageSetup()[pri:0, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:08Z" name="loginPageSetup" finished-at="2021-05-11T12:24:09Z" duration-ms="1599" status="PASS">
+        <test-method is-config="true" signature="loginPageSetup()[pri:0, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:22:38Z" name="loginPageSetup" finished-at="2021-05-11T14:22:40Z" duration-ms="1629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageSetup -->
-        <test-method signature="testForgotPasswordTitle()[pri:1, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:09Z" name="testForgotPasswordTitle" finished-at="2021-05-11T12:24:11Z" duration-ms="1452" status="PASS">
+        <test-method signature="testForgotPasswordTitle()[pri:1, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:22:40Z" name="testForgotPasswordTitle" finished-at="2021-05-11T14:22:42Z" duration-ms="2827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testForgotPasswordTitle -->
-        <test-method signature="testForgotPassword()[pri:2, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:11Z" name="testForgotPassword" finished-at="2021-05-11T12:24:15Z" duration-ms="4750" status="PASS">
+        <test-method signature="testForgotPassword()[pri:2, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:22:43Z" name="testForgotPassword" finished-at="2021-05-11T14:22:47Z" duration-ms="4541" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testForgotPassword -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:16Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T12:24:28Z" duration-ms="12426" status="FAIL">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:22:47Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T14:23:19Z" duration-ms="32187" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -547,10 +547,10 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.democart.utils.ElementUtil.waitForElementVisible(ElementUtil.java:202)
@@ -580,11 +580,11 @@ Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element:
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'FG2000122000', ip: '172.28.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210415204500, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 7281, moz:profile: /tmp/rust_mozprofileHeXxkP, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.72-microsoft-standard-WSL2, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 7d1b2c07-7899-43bb-9590-ab2...}
-Session ID: 7d1b2c07-7899-43bb-9590-ab2b1aadcaf2
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 20900, moz:profile: C:\Users\450520\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 414ebbf7-465a-4e5a-8517-357e22aaf442
 *** Element info: {Using=xpath, value=//div[@class='alert alert-success alert-dismissible']}
-at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+at jdk.internal.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -592,6 +592,7 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpR
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -607,7 +608,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:28Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T12:24:40Z" duration-ms="12311" status="FAIL">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:23:19Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T14:23:52Z" duration-ms="32185" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -627,10 +628,10 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.democart.utils.ElementUtil.waitForElementVisible(ElementUtil.java:202)
@@ -660,11 +661,11 @@ Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element:
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'FG2000122000', ip: '172.28.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210415204500, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 7281, moz:profile: /tmp/rust_mozprofileHeXxkP, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.72-microsoft-standard-WSL2, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 7d1b2c07-7899-43bb-9590-ab2...}
-Session ID: 7d1b2c07-7899-43bb-9590-ab2b1aadcaf2
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 20900, moz:profile: C:\Users\450520\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 414ebbf7-465a-4e5a-8517-357e22aaf442
 *** Element info: {Using=xpath, value=//div[@class='alert alert-success alert-dismissible']}
-at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+at jdk.internal.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -672,6 +673,7 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpR
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -687,7 +689,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:41Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T12:24:53Z" duration-ms="12315" status="FAIL">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:23:52Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T14:24:24Z" duration-ms="32190" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -707,10 +709,10 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.democart.utils.ElementUtil.waitForElementVisible(ElementUtil.java:202)
@@ -740,11 +742,11 @@ Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element:
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'FG2000122000', ip: '172.28.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210415204500, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 7281, moz:profile: /tmp/rust_mozprofileHeXxkP, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.72-microsoft-standard-WSL2, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 7d1b2c07-7899-43bb-9590-ab2...}
-Session ID: 7d1b2c07-7899-43bb-9590-ab2b1aadcaf2
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 20900, moz:profile: C:\Users\450520\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 414ebbf7-465a-4e5a-8517-357e22aaf442
 *** Element info: {Using=xpath, value=//div[@class='alert alert-success alert-dismissible']}
-at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+at jdk.internal.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -752,6 +754,7 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpR
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -767,7 +770,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:24:53Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T12:25:06Z" duration-ms="12340" status="FAIL">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:24:24Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-11T14:24:56Z" duration-ms="32257" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -787,10 +790,10 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 10 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='alert alert-success alert-dismissible'] (tried for 30 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.democart.utils.ElementUtil.waitForElementVisible(ElementUtil.java:202)
@@ -820,11 +823,11 @@ Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element:
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'FG2000122000', ip: '172.28.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210415204500, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 7281, moz:profile: /tmp/rust_mozprofileHeXxkP, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.72-microsoft-standard-WSL2, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 7d1b2c07-7899-43bb-9590-ab2...}
-Session ID: 7d1b2c07-7899-43bb-9590-ab2b1aadcaf2
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210504152106, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 20900, moz:profile: C:\Users\450520\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 414ebbf7-465a-4e5a-8517-357e22aaf442
 *** Element info: {Using=xpath, value=//div[@class='alert alert-success alert-dismissible']}
-at jdk.internal.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+at jdk.internal.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -832,6 +835,7 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpR
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -847,11 +851,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginTest()[pri:4, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:25:06Z" name="loginTest" finished-at="2021-05-11T12:25:09Z" duration-ms="3123" status="PASS">
+        <test-method signature="loginTest()[pri:4, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:24:57Z" name="loginTest" finished-at="2021-05-11T14:25:00Z" duration-ms="3099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.LoginPageTest@2ddb3ae8]" started-at="2021-05-11T12:25:09Z" name="tearDown" finished-at="2021-05-11T12:25:10Z" duration-ms="848" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.LoginPageTest@3481ff98]" started-at="2021-05-11T14:25:00Z" name="tearDown" finished-at="2021-05-11T14:25:03Z" duration-ms="2949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
