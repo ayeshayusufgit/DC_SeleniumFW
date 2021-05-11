@@ -5,18 +5,6 @@
     <listener class-name="com.democart.listeners.ExtentReportListener"/>
     <listener class-name="com.democart.listeners.AllureReportListener"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="Accounts Page Test(failed)" verbose="3">
-    <classes>
-      <class name="com.democart.tests.AccountsPageTest">
-        <methods>
-          <include name="accountPageSetup"/>
-          <include name="tearDown"/>
-          <include name="searchTest" invocation-numbers="0 4 5"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.democart.tests.AccountsPageTest -->
-    </classes>
-  </test> <!-- Accounts Page Test(failed) -->
   <test thread-count="3" parallel="tests" name="Register Page Test(failed)" verbose="3">
     <classes>
       <class name="com.democart.tests.RegisterPageTest">
@@ -29,6 +17,18 @@
       </class> <!-- com.democart.tests.RegisterPageTest -->
     </classes>
   </test> <!-- Register Page Test(failed) -->
+  <test thread-count="3" parallel="tests" name="Accounts Page Test(failed)" verbose="3">
+    <classes>
+      <class name="com.democart.tests.AccountsPageTest">
+        <methods>
+          <include name="accountPageSetup"/>
+          <include name="tearDown"/>
+          <include name="searchTest" invocation-numbers="0 4 5"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.democart.tests.AccountsPageTest -->
+    </classes>
+  </test> <!-- Accounts Page Test(failed) -->
   <test thread-count="3" parallel="tests" name="Login Page Test(failed)" verbose="3">
     <classes>
       <class name="com.democart.tests.LoginPageTest">
