@@ -107,7 +107,7 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 		System.out.println((result.getMethod().getMethodName() + " failed!"));
 		try {
 			test.get().fail(result.getThrowable(),
-					MediaEntityBuilder.createScreenCaptureFromPath("."+getScreenshot()).build());
+					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
 		} catch (IOException e) {
 			System.err
 					.println("Exception thrown while updating test fail status " + Arrays.toString(e.getStackTrace()));

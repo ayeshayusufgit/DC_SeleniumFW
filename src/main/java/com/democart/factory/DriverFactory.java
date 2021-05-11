@@ -137,7 +137,8 @@ public class DriverFactory {
 
 	public String getScreenshot() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		//String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		String filePath =  "./screenshots/" + System.currentTimeMillis() + ".png";
 		File dest = new File(filePath);
 		try {
 			FileUtils.copyFile(src, dest);
