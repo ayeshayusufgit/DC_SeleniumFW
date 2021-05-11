@@ -113,7 +113,7 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public String getScreenshot_latest64_1() {
+	public String getScreenshot() {
 		FileInputStream fileInputStream = null;
 		String encodedBase64 = null;
 
@@ -146,7 +146,7 @@ public class DriverFactory {
 	    TakesScreenshot screenshot = (TakesScreenshot) driver;
 	    File source = screenshot.getScreenshotAs(OutputType.FILE);
 	    //String destination =System.getProperty("user.dir")+"\\Foldername\\target\\cucumber-reports\\"+"Screenshot_" + sDate + ".png";
-	    String destination ="D:/automation/selenium/DC_SeleniumFW/screenshots" + sDate + ".png";
+	    String destination ="D:\\automation\\selenium\\DC_SeleniumFW\\screenshots\\ss_" + sDate + ".png";
 	    
 	    File finalDestination = new File(destination);
 	   
@@ -164,7 +164,7 @@ public class DriverFactory {
 	    return "data:image/png;base64,"+encodedBase64;
 	}
 
-	public String getScreenshot() {
+	public String getScreenshot_bac() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		//String filePath =  "./screenshots/" + System.currentTimeMillis() + ".png";
