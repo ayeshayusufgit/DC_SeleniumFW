@@ -2,8 +2,9 @@ package com.democart.factory;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -12,6 +13,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -21,29 +24,38 @@ public class DriverFactory {
 	public WebDriver driver;
 	// Threadlocal concept needs to be applied on WebDriver
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+	public Properties prop;
 
 	public WebDriver init_driver(Properties prop) {
-		String browser = prop.getProperty("browser");
-		System.out.println("The browser:" + browser);
+		String browserName = prop.getProperty("browser");
+		System.out.println("The browser:" + browserName);
 
-		switch (browser.trim()) {
-		case "Chrome":
+		switch (browserName.trim()) {
+		case "chrome":
 			WebDriverManager.chromedriver().setup();
-			tlDriver.set(new ChromeDriver());
+			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+				init_remoteDriver("chrome");
+			} else {
+				tlDriver.set(new ChromeDriver());
+			}
 			break;
 
-		case "Firefox":
+		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
-			tlDriver.set(new FirefoxDriver());
+			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
+				init_remoteDriver("firefox");
+			} else {
+				tlDriver.set(new FirefoxDriver());
+			}
 			break;
 
-		case "Safari":
+		case "safari":
 			tlDriver.set(new SafariDriver());
 			break;
 
 		default:
 			System.out.println("Please pass the correct browser name");
-			System.out.println("Pass only Chrome|Firefox|Safari in the config.properties");
+			System.out.println("Pass only chrome|firefox|safari in the config.properties");
 		}
 
 		// driver().manage().deleteAllCookies();
@@ -57,6 +69,31 @@ public class DriverFactory {
 
 	public static synchronized WebDriver getDriver() {
 		return tlDriver.get();
+	}
+
+	public void init_remoteDriver(String browser) {
+
+		if (browser.equals("chrome")) {
+			DesiredCapabilities cap = DesiredCapabilities.chrome();
+			cap.setCapability("browserName", "chrome");
+			try {
+				 tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap));
+				//tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else if (browser.equals("firefox")) {
+			DesiredCapabilities cap = DesiredCapabilities.firefox();
+			cap.setCapability("browserName", "firefox");
+			try {
+				 tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap));
+				//tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public Properties init_prop() {
