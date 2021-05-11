@@ -2,11 +2,14 @@ package com.democart.factory;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import java.util.Properties;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -77,8 +80,8 @@ public class DriverFactory {
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability("browserName", "chrome");
 			try {
-				 tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap));
-				//tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
+				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+				// tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -87,8 +90,8 @@ public class DriverFactory {
 			DesiredCapabilities cap = DesiredCapabilities.firefox();
 			cap.setCapability("browserName", "firefox");
 			try {
-				 tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap));
-				//tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
+				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+				// tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -109,6 +112,30 @@ public class DriverFactory {
 	}
 
 	public String getScreenshot() {
+		FileInputStream fileInputStream = null;
+		String encodedBase64 = null;
+
+		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		File finalDestination = new File(filePath);
+
+		try {
+			FileUtils.copyFile(src, finalDestination);
+			fileInputStream = new FileInputStream(finalDestination);
+			byte[] bytes = new byte[(int) finalDestination.length()];
+			fileInputStream.read(bytes);
+			encodedBase64 = new String(Base64.encodeBase64(bytes));
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "data:image/png;base64," + encodedBase64;
+	}
+
+	public String getScreenshot_bac() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File dest = new File(filePath);
@@ -118,6 +145,8 @@ public class DriverFactory {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		return filePath;
 	}
+
 }
