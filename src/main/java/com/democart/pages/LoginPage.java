@@ -36,6 +36,6 @@ public class LoginPage {
 	}
 
 	public String getLoginMessage() {
-		return elementUtil.waitForElementVisible(messageText, 10).getText();
+		return elementUtil.waitForElementVisible(messageText, 30).getText();
 	}
 }
