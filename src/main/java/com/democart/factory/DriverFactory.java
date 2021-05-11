@@ -6,11 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -111,7 +113,7 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public String getScreenshot_latest() {
+	public String getScreenshot_latest64_1() {
 		FileInputStream fileInputStream = null;
 		String encodedBase64 = null;
 
@@ -134,11 +136,38 @@ public class DriverFactory {
 		}
 		return "data:image/png;base64," + encodedBase64;
 	}
+	
+	public String getScreenshot_latest64_2() {
+		Date oDate = new Date();
+	    SimpleDateFormat oSDF = new SimpleDateFormat("yyyyMMddHHmmss");
+	    String sDate = oSDF.format(oDate);
+	    String encodedBase64 = null;
+	    FileInputStream fileInputStream = null;
+	    TakesScreenshot screenshot = (TakesScreenshot) driver;
+	    File source = screenshot.getScreenshotAs(OutputType.FILE);
+	    //String destination =System.getProperty("user.dir")+"\\Foldername\\target\\cucumber-reports\\"+"Screenshot_" + sDate + ".png";
+	    String destination ="D:/automation/selenium/DC_SeleniumFW/screenshots" + sDate + ".png";
+	    
+	    File finalDestination = new File(destination);
+	   
+
+	    try {
+	    	FileUtils.copyFile(source, finalDestination);
+	        fileInputStream =new FileInputStream(finalDestination);
+	        byte[] bytes =new byte[(int)finalDestination.length()];
+	        fileInputStream.read(bytes);
+	        encodedBase64 = new String(Base64.encodeBase64(bytes));
+
+	    }catch (IOException e){
+	        e.printStackTrace();
+	    }
+	    return "data:image/png;base64,"+encodedBase64;
+	}
 
 	public String getScreenshot() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-		//String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
-		String filePath =  "./screenshots/" + System.currentTimeMillis() + ".png";
+		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		//String filePath =  "./screenshots/" + System.currentTimeMillis() + ".png";
 		File dest = new File(filePath);
 		try {
 			FileUtils.copyFile(src, dest);
