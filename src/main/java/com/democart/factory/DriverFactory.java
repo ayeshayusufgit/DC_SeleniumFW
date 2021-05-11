@@ -6,8 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.codec.binary.Base64;
@@ -81,6 +79,7 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability("browserName", "chrome");
+			
 			try {
 				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
 				// tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
@@ -136,11 +135,10 @@ public class DriverFactory {
 		}
 		return "data:image/png;base64," + encodedBase64;
 	}
-	
-	public String getScreenshot_2() {
+
+	public String getScreenshot_backup() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
-		//String filePath =  "./screenshots/" + System.currentTimeMillis() + ".png";
 		File dest = new File(filePath);
 		try {
 			FileUtils.copyFile(src, dest);
