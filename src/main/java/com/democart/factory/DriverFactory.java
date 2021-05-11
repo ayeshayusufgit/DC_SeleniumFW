@@ -111,7 +111,7 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public String getScreenshot() {
+	public String getScreenshot_latest() {
 		FileInputStream fileInputStream = null;
 		String encodedBase64 = null;
 
@@ -135,7 +135,7 @@ public class DriverFactory {
 		return "data:image/png;base64," + encodedBase64;
 	}
 
-	public String getScreenshot_bac() {
+	public String getScreenshot() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File dest = new File(filePath);
