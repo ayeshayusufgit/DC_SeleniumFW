@@ -113,7 +113,7 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public String getScreenshot() {
+	public String getScreenshot_1() {
 		FileInputStream fileInputStream = null;
 		String encodedBase64 = null;
 
@@ -137,7 +137,7 @@ public class DriverFactory {
 		return "data:image/png;base64," + encodedBase64;
 	}
 	
-	public String getScreenshot_latest64_2() {
+	public String getScreenshot() {
 		Date oDate = new Date();
 	    SimpleDateFormat oSDF = new SimpleDateFormat("yyyyMMddHHmmss");
 	    String sDate = oSDF.format(oDate);
