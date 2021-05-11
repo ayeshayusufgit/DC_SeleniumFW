@@ -113,7 +113,7 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public String getScreenshot_1() {
+	public String getScreenshot() {
 		FileInputStream fileInputStream = null;
 		String encodedBase64 = null;
 
@@ -137,7 +137,7 @@ public class DriverFactory {
 		return "data:image/png;base64," + encodedBase64;
 	}
 	
-	public String getScreenshot() {
+	public String getScreenshot_1() {
 		Date oDate = new Date();
 	    SimpleDateFormat oSDF = new SimpleDateFormat("yyyyMMddHHmmss");
 	    String sDate = oSDF.format(oDate);
@@ -164,7 +164,7 @@ public class DriverFactory {
 	    return "data:image/png;base64,"+encodedBase64;
 	}
 
-	public String getScreenshot_bac() {
+	public String getScreenshot_2() {
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		//String filePath =  "./screenshots/" + System.currentTimeMillis() + ".png";
@@ -178,5 +178,4 @@ public class DriverFactory {
 
 		return filePath;
 	}
-
 }
