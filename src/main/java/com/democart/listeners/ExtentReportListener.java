@@ -41,13 +41,13 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 			}
 		}
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
-		// To set the document title
+		//To set the document title
 		htmlReporter.config().setDocumentTitle("Automation Test Results");
-		// To set the report name
+		//To set the report name
 		htmlReporter.config().setReportName("Automation Test Results");
-		// To set the chart location
+		//To set the chart location
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		// To set the theme
+		//To set the theme
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
 		extent = new ExtentReports();
@@ -57,20 +57,20 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 		return extent;
 	}
 
-	// Nothin to be done when the testsuite is started just print the below message
+	//Nothin to be done when the testsuite is started just print the below message 
 	public synchronized void onStart(ITestContext context) {
 		System.out.println("Test Suite started!");
 	}
+	
 
-	// Nothin to be done when the testsuite is ending just print the below message
+	//Nothin to be done when the testsuite is ending just print the below message 
 	public synchronized void onFinish(ITestContext context) {
 		System.out.println(("Test Suite is ending!"));
 		extent.flush();
 		test.remove();
 	}
 
-	// When the testcase is started then the below details have to be captured and
-	// below message has to get printed, no SS required
+	//When the testcase is started then the below details have to be captured and below message has to get printed, no SS required
 	public synchronized void onTestStart(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		String qualifiedName = result.getMethod().getQualifiedName();
@@ -92,17 +92,14 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 		test.get().getModel().setStartTime(getTime(result.getStartMillis()));
 	}
 
-	// When the testcase is a success then below message has to get printed, no SS
-	// required
+	//When the testcase is a success then below message has to get printed, no SS required
 	public synchronized void onTestSuccess(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " passed!"));
 		test.get().pass("Test passed");
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
 	}
 
-	// When the testcase is failed then below message has to get printed, SS
-	// required(using selenium getScreenShot() in The DriverFactory class
-	// init_driver() method)
+	//When the testcase is failed then below message has to get printed, SS required(using selenium getScreenShot() in The DriverFactory class init_driver() method) 
 	public synchronized void onTestFailure(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " failed!"));
 		try {
@@ -115,14 +112,12 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
 	}
 
-	// When the testcase is skipped then below message has to get printed, SS
-	// required(using selenium getScreenShot() in The DriverFactory class
-	// init_driver() method)
+	//When the testcase is skipped then below message has to get printed, SS required(using selenium getScreenShot() in The DriverFactory class init_driver() method) 
 	public synchronized void onTestSkipped(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " skipped!"));
-		
 		try {
-			test.get().skip(result.getThrowable(),MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
+			test.get().skip(result.getThrowable(),
+					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
 		} catch (IOException e) {
 			System.err
 					.println("Exception thrown while updating test skip status " + Arrays.toString(e.getStackTrace()));

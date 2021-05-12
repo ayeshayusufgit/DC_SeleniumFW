@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [Democart Automation REgression Suite]" guice-stage="DEVELOPMENT" verbose="3">
-  <listeners>
-    <listener class-name="com.democart.listeners.ExtentReportListener"/>
-    <listener class-name="com.democart.listeners.AllureReportListener"/>
-  </listeners>
-  <test thread-count="3" parallel="tests" name="Accounts Page Test(failed)" verbose="3">
-    <classes>
-      <class name="com.democart.tests.AccountsPageTest">
-        <methods>
-          <include name="accountPageSetup"/>
-          <include name="tearDown"/>
-          <include name="searchTest" invocation-numbers="0 4 5"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.democart.tests.AccountsPageTest -->
-    </classes>
-  </test> <!-- Accounts Page Test(failed) -->
-  <test thread-count="3" parallel="tests" name="Register Page Test(failed)" verbose="3">
-    <classes>
-      <class name="com.democart.tests.RegisterPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="registrationTest" invocation-numbers="0 1 2 3"/>
-          <include name="registerPageSetup"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.democart.tests.RegisterPageTest -->
-    </classes>
-  </test> <!-- Register Page Test(failed) -->
-  <test thread-count="3" parallel="tests" name="Login Page Test(failed)" verbose="3">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.democart.tests.LoginPageTest">
         <methods>
           <include name="tearDown"/>
           <include name="loginPageSetup"/>
-          <include name="loginDataDrivenTest" invocation-numbers="0 1 2 3"/>
           <include name="setUp"/>
+          <include name="testForgotPassword"/>
         </methods>
       </class> <!-- com.democart.tests.LoginPageTest -->
     </classes>
-  </test> <!-- Login Page Test(failed) -->
-</suite> <!-- Failed suite [Democart Automation REgression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

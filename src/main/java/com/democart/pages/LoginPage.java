@@ -14,7 +14,9 @@ public class LoginPage {
 	private By passwordTextbox = By.id("input-password");
 	private By loginButton = By.xpath("//input[@value='Login']");
 	private By forgotPasswordLink = By.linkText("Forgotten Password");
-	private By messageText = By.xpath("//div[@class='alert alert-success alert-dismissible']");
+	// private By messageText = By.xpath("//div[@class='alert alert-success
+	// alert-dismissible']");
+	private By messageText = By.cssSelector("div.alert.alert-danger.alert-dismissible");
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -36,6 +38,7 @@ public class LoginPage {
 	}
 
 	public String getLoginMessage() {
-		return elementUtil.waitForElementVisible(messageText, 30).getText();
+		return elementUtil.waitForElementVisible(messageText, 10).getText();
+		//return elementUtil.waitForElementWithFluentWait(messageText, 10, 1).getText();
 	}
 }

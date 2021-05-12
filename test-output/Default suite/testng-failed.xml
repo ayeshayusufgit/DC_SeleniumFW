@@ -7,8 +7,8 @@
         <methods>
           <include name="tearDown"/>
           <include name="loginPageSetup"/>
-          <include name="loginDataDrivenTest" invocation-numbers="0 1 2 3"/>
           <include name="setUp"/>
+          <include name="testForgotPassword"/>
         </methods>
       </class> <!-- com.democart.tests.LoginPageTest -->
     </classes>
