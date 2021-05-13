@@ -58,7 +58,7 @@ public class AccountsPage {
 		return accountsSectionLinkTextList;
 	}
 
-	@Step("Perform Search with:{0}")
+	@Step("Perform Search with: {0}")
 	public boolean doSearch(String searchTerm) {
 		System.out.println("Searching for" + searchTerm);
 		elementUtil.waitForElementVisible(searchTextbox, 10);

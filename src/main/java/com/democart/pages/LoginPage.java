@@ -25,7 +25,7 @@ public class LoginPage {
 		elementUtil = new ElementUtil(driver);
 	}
 
-	@Step("Perform Login with email:{0} and password:{1}")
+	@Step("Perform Login with: {0} and {1}")
 	public AccountsPage doLogin(String email, String password) {
 		elementUtil.clickWhenReady(emailTextbox, 10);
 		elementUtil.doSendkeys(emailTextbox, email);
@@ -35,7 +35,7 @@ public class LoginPage {
 		return new AccountsPage(driver);
 	}
 
-	@Step("Perform Login with email:{0} and password:{1}")
+	@Step("Click on Forgot Password Link")
 	public ForgotPasswordPage clickForgotPassword() {
 		elementUtil.clickWhenReady(forgotPasswordLink, 10);
 		return new ForgotPasswordPage(driver);

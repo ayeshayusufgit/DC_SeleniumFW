@@ -8,7 +8,7 @@
           <include name="tearDown"/>
           <include name="loginPageSetup"/>
           <include name="setUp"/>
-          <include name="testForgotPassword"/>
+          <include name="forgotPasswordTest"/>
         </methods>
       </class> <!-- com.democart.tests.LoginPageTest -->
     </classes>

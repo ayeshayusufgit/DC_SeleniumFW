@@ -33,7 +33,7 @@ public class RegistrationPage {
 		elementUtil = new ElementUtil(driver);
 	}
 
-	@Step("Perform account registration with firstname:{0} lastname:{1} email:{2} telephone:{3} password:{4} subscribe:{5}")
+	@Step("Perform account registration with: {0},{1},{2},{3},{4},{5}")
 	public boolean accountRegistration(String fname, String lname, String email, String telephone, String password,
 			String subscribe) {
 

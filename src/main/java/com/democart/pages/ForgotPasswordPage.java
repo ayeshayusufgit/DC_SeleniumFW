@@ -27,7 +27,7 @@ public class ForgotPasswordPage {
 		return elementUtil.waitForTitleToBe(Constants.FORGOT_PASSWORD_TITLE, 10);
 	}
 
-	@Step("Reset Password with email:{0}")
+	@Step("Reset Password with: {0}")
 	public LoginPage resetPassword(String email) {
 		elementUtil.clickWhenReady(emailTextbox, 10);
 		elementUtil.doSendkeys(emailTextbox, email);

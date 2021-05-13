@@ -27,7 +27,7 @@ public class LoginPageTest extends BaseTest {
 	@Description("Verify Forgot Password Title Test")
 	@Severity(SeverityLevel.MINOR)
 	@Test(priority = 1)
-	public void testForgotPasswordTitle() {
+	public void forgotPasswordTitleTest() {
 		forgotPasswordPage = loginPage.clickForgotPassword();
 		Assert.assertEquals(forgotPasswordPage.getForgotPasswordTitle(), Constants.FORGOT_PASSWORD_TITLE);
 	}
@@ -35,7 +35,7 @@ public class LoginPageTest extends BaseTest {
 	@Description("Verify Forgot Password Test")
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority = 2)
-	public void testForgotPassword() {
+	public void forgotPasswordTest() {
 		forgotPasswordPage = loginPage.clickForgotPassword();
 		loginPage = forgotPasswordPage.resetPassword(prop.getProperty("email"));
 		Assert.assertEquals(loginPage.getLoginMessage(), Constants.FORGOT_PASSWORD_EMAIL_SENT);
