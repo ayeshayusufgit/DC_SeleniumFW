@@ -22,7 +22,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DriverFactory {
+public class DriverFactory_Bac {
 
 	public WebDriver driver;
 	// Threadlocal concept needs to be applied on WebDriver
@@ -112,24 +112,41 @@ public class DriverFactory {
 		return prop;
 	}
 
-	public static String getBase64Screenshot() throws IOException {
-	    String encodedBase64 = null;
-	    FileInputStream fileInputStream = null;
-	    File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-		String dest = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
-	
-	    File finalDestination = new File(dest);
-	    FileUtils.copyFile(src, finalDestination);
+	public String getScreenshot_backup() {
+		FileInputStream fileInputStream = null;
+		String encodedBase64 = null;
 
-	    try {
-	        fileInputStream =new FileInputStream(finalDestination);
-	        byte[] bytes =new byte[(int)finalDestination.length()];
-	        fileInputStream.read(bytes);
-	        encodedBase64 = new String(Base64.encodeBase64(bytes));
-	    }catch (FileNotFoundException e){
-	        e.printStackTrace();
-	    }
+		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		File finalDestination = new File(filePath);
 
-	    return encodedBase64;
+		try {
+			FileUtils.copyFile(src, finalDestination);
+			fileInputStream = new FileInputStream(finalDestination);
+			byte[] bytes = new byte[(int) finalDestination.length()];
+			fileInputStream.read(bytes);
+			encodedBase64 = new String(Base64.encodeBase64(bytes));
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "data:image/png;base64," + encodedBase64;
+	}
+
+	public String getScreenshot() {
+		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		String filePath = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		File dest = new File(filePath);
+		try {
+			FileUtils.copyFile(src, dest);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return filePath;
 	}
 }

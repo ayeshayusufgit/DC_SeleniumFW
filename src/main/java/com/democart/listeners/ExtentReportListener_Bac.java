@@ -15,13 +15,12 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.democart.factory.DriverFactory;
 
-public class ExtentReportListener extends DriverFactory implements ITestListener {
+public class ExtentReportListener_Bac extends DriverFactory implements ITestListener {
 
 	private static final String OUTPUT_FOLDER = "./build/";
 	private static final String FILE_NAME = "TestExecutionReport.html";
@@ -102,29 +101,28 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 
 	//When the testcase is failed then below message has to get printed, SS required(using selenium getScreenShot() in The DriverFactory class init_driver() method) 
 	public synchronized void onTestFailure(ITestResult result) {
-	    //System.out.println("==="+methodDes + "=== failed!");
-	    try {
-
-	        String base64Screenshot = getBase64Screenshot();
-	        MediaEntityModelProvider mediaModel = MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).build();
-	        test.get().fail("image:", mediaModel);
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-	    test.get().fail(result.getThrowable().getMessage());
+		/*System.out.println((result.getMethod().getMethodName() + " failed!"));
+		try {
+			test.get().fail(result.getThrowable(),
+					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
+		} catch (IOException e) {
+			System.err
+					.println("Exception thrown while updating test fail status " + Arrays.toString(e.getStackTrace()));
+		}
+		test.get().getModel().setEndTime(getTime(result.getEndMillis()));*/
 	}
-	
+
 	//When the testcase is skipped then below message has to get printed, SS required(using selenium getScreenShot() in The DriverFactory class init_driver() method) 
 	public synchronized void onTestSkipped(ITestResult result) {
-		System.out.println((result.getMethod().getMethodName() + " skipped!"));
+		/*System.out.println((result.getMethod().getMethodName() + " skipped!"));
 		try {
 			test.get().skip(result.getThrowable(),
-					MediaEntityBuilder.createScreenCaptureFromPath(getBase64Screenshot()).build());
+					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
 		} catch (IOException e) {
 			System.err
 					.println("Exception thrown while updating test skip status " + Arrays.toString(e.getStackTrace()));
 		}
-		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
+		test.get().getModel().setEndTime(getTime(result.getEndMillis()));*/
 	}
 
 	public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult result) {
