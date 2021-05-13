@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import com.democart.utils.Constants;
 import com.democart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 //Some comments
 public class AccountsPage {
 	private WebDriver driver;
@@ -26,10 +28,12 @@ public class AccountsPage {
 		elementUtil = new ElementUtil(driver);
 	}
 
+	@Step("Get the Account Page Title")
 	public String getAccountsPageTitle() {
 		return elementUtil.waitForTitleToBe(Constants.ACCOUNTS_PAGE_TITLE, 10);
 	}
 
+	@Step("Get the Account Page Header value")
 	public String getHeaderValue() {
 		if (elementUtil.doIsDisplayed(headerLogo)) {
 			return elementUtil.doGetText(headerLogo);
@@ -37,10 +41,12 @@ public class AccountsPage {
 		return null;
 	}
 
+	@Step("Get Account Section count")
 	public int getAccountsSectionLinkCount() {
 		return elementUtil.getElements(accountSectionLinks).size();
 	}
 
+	@Step("Get Account Section List")
 	public List<String> getAccountsSectionLinkText() {
 
 		List<WebElement> accountsSectionElementsList = elementUtil.getElements(accountSectionLinks);
@@ -52,6 +58,7 @@ public class AccountsPage {
 		return accountsSectionLinkTextList;
 	}
 
+	@Step("Perform Search with:{0}")
 	public boolean doSearch(String searchTerm) {
 		System.out.println("Searching for" + searchTerm);
 		elementUtil.waitForElementVisible(searchTextbox, 10);

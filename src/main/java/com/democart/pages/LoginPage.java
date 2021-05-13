@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.democart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class LoginPage {
 
 	private WebDriver driver;
@@ -23,6 +25,7 @@ public class LoginPage {
 		elementUtil = new ElementUtil(driver);
 	}
 
+	@Step("Perform Login with email:{0} and password:{1}")
 	public AccountsPage doLogin(String email, String password) {
 		elementUtil.clickWhenReady(emailTextbox, 10);
 		elementUtil.doSendkeys(emailTextbox, email);
@@ -32,11 +35,14 @@ public class LoginPage {
 		return new AccountsPage(driver);
 	}
 
+	@Step("Perform Login with email:{0} and password:{1}")
 	public ForgotPasswordPage clickForgotPassword() {
 		elementUtil.clickWhenReady(forgotPasswordLink, 10);
 		return new ForgotPasswordPage(driver);
 	}
 
+	
+	@Step("Get login message")
 	public String getLoginMessage() {
 		return elementUtil.waitForElementVisible(messageText, 10).getText();
 		//return elementUtil.waitForElementWithFluentWait(messageText, 10, 1).getText();
