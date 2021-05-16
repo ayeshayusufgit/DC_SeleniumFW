@@ -79,6 +79,8 @@ public class DriverFactory {
 		if (browser.equals("chrome")) {
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability("browserName", "chrome");
+			cap.setCapability("browserVersion", "85.0");
+			cap.setCapability("enableVNC", true);
 
 			try {
 				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
@@ -90,6 +92,9 @@ public class DriverFactory {
 		} else if (browser.equals("firefox")) {
 			DesiredCapabilities cap = DesiredCapabilities.firefox();
 			cap.setCapability("browserName", "firefox");
+			cap.setCapability("browserVersion", "83.0");
+			cap.setCapability("enableVNC", true);
+			
 			try {
 				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
 				// tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));

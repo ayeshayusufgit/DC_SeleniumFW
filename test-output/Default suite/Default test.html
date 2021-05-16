@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 13 14:40:27 IST 2021</td>
+<td>Started on:</td><td>Sun May 16 21:01:41 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>46 seconds (46227 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39480 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -107,13 +107,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: div.alert.alert-danger.alert-dismissible
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.alert.alert-danger.alert-dismissible&quot;}
+  (Session info: chrome=85.0.4183.121)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;FG2000122000&apos;, ip: &apos;172.28.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210415204500, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 411, moz:profile: /tmp/rust_mozprofileHS9D0j, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.72-microsoft-standard-WSL2, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ab564b3b-d840-4ceb-a6d6-3ec...}
-Session ID: ab564b3b-d840-4ceb-a6d6-3eccc128323f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /tmp/.com.google.Chrome.FaMzkf}, goog:chromeOptions: {debuggerAddress: localhost:36315}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4c594b1824191128527eeedfccda7541
 *** Element info: {Using=css selector, value=div.alert.alert-danger.alert-dismissible}
 	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -132,8 +133,8 @@ Session ID: ab564b3b-d840-4ceb-a6d6-3eccc128323f
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 28 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1038375788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1038375788'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div.alert.alert-danger.alert-dismissible (tried for 10 second(s) with 500 milliseconds interval)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1746080167", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1746080167'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div.alert.alert-danger.alert-dismissible (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.democart.utils.ElementUtil.waitForElementVisible(ElementUtil.java:202)
@@ -164,13 +165,14 @@ Session ID: ab564b3b-d840-4ceb-a6d6-3eccc128323f
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: div.alert.alert-danger.alert-dismissible
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div.alert.alert-danger.alert-dismissible&quot;}
+  (Session info: chrome=85.0.4183.121)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;FG2000122000&apos;, ip: &apos;172.28.32.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.1&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 88.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210415204500, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 411, moz:profile: /tmp/rust_mozprofileHS9D0j, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.4.72-microsoft-standard-WSL2, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: ab564b3b-d840-4ceb-a6d6-3ec...}
-Session ID: ab564b3b-d840-4ceb-a6d6-3eccc128323f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /tmp/.com.google.Chrome.FaMzkf}, goog:chromeOptions: {debuggerAddress: localhost:36315}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4c594b1824191128527eeedfccda7541
 *** Element info: {Using=css selector, value=div.alert.alert-danger.alert-dismissible}
 	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -191,7 +193,7 @@ Session ID: ab564b3b-d840-4ceb-a6d6-3eccc128323f
 	... 28 more
 </pre></div></td>
 <td>15</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -204,32 +206,32 @@ Session ID: ab564b3b-d840-4ceb-a6d6-3eccc128323f
 <td title='com.democart.tests.LoginPageTest.forgotPasswordTitleTest()'><b>forgotPasswordTitleTest</b><br>Test class: com.democart.tests.LoginPageTest</td>
 <td></td>
 <td>1</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 <tr>
 <td title='com.democart.tests.LoginPageTest.loginDataDrivenTest()'><b>loginDataDrivenTest</b><br>Test class: com.democart.tests.LoginPageTest<br>Parameters: ayesha.yusuf@gmail.com, abc123, Warning: No match for E-Mail Address and/or Password.</td>
 <td></td>
 <td>2</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 <tr>
 <td title='com.democart.tests.LoginPageTest.loginDataDrivenTest()'><b>loginDataDrivenTest</b><br>Test class: com.democart.tests.LoginPageTest<br>Parameters: ayesha.yusuf@gmail.com, "", Warning: No match for E-Mail Address and/or Password.</td>
 <td></td>
 <td>2</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 <tr>
 <td title='com.democart.tests.LoginPageTest.loginDataDrivenTest()'><b>loginDataDrivenTest</b><br>Test class: com.democart.tests.LoginPageTest<br>Parameters: "", abc123, Warning: No match for E-Mail Address and/or Password.</td>
 <td></td>
 <td>2</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 <tr>
 <td title='com.democart.tests.LoginPageTest.loginDataDrivenTest()'><b>loginDataDrivenTest</b><br>Test class: com.democart.tests.LoginPageTest<br>Parameters: "", "", Warning: No match for E-Mail Address and/or Password.</td>
 <td></td>
 <td>2</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 <tr>
 <td title='com.democart.tests.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.democart.tests.LoginPageTest</td>
 <td></td>
 <td>3</td>
-<td>com.democart.tests.LoginPageTest@633a2e99</td></tr>
+<td>com.democart.tests.LoginPageTest@244e619a</td></tr>
 </table><p>
 </body>
 </html>
