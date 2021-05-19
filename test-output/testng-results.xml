@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-16T15:31:41Z" name="Default suite" finished-at="2021-05-16T15:32:20Z" duration-ms="39480">
+  <suite started-at="2021-05-19T08:21:05Z" name="Default suite" finished-at="2021-05-19T08:21:47Z" duration-ms="41478">
     <groups>
     </groups>
-    <test started-at="2021-05-16T15:31:41Z" name="Default test" finished-at="2021-05-16T15:32:20Z" duration-ms="39480">
+    <test started-at="2021-05-19T08:21:05Z" name="Default test" finished-at="2021-05-19T08:21:47Z" duration-ms="41478">
       <class name="com.democart.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:31:41Z" name="setUp" finished-at="2021-05-16T15:31:47Z" duration-ms="6447" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:05Z" name="setUp" finished-at="2021-05-19T08:21:14Z" duration-ms="8052" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="loginPageSetup()[pri:0, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:31:47Z" name="loginPageSetup" finished-at="2021-05-16T15:31:49Z" duration-ms="1844" status="PASS">
+        <test-method is-config="true" signature="loginPageSetup()[pri:0, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:14Z" name="loginPageSetup" finished-at="2021-05-19T08:21:15Z" duration-ms="1859" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageSetup -->
-        <test-method signature="forgotPasswordTitleTest()[pri:1, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:31:49Z" name="forgotPasswordTitleTest" finished-at="2021-05-16T15:31:51Z" duration-ms="1691" status="PASS">
+        <test-method signature="forgotPasswordTitleTest()[pri:1, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:15Z" name="forgotPasswordTitleTest" finished-at="2021-05-19T08:21:17Z" duration-ms="1598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPasswordTitleTest -->
-        <test-method signature="forgotPasswordTest()[pri:2, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:31:51Z" name="forgotPasswordTest" finished-at="2021-05-16T15:32:06Z" duration-ms="15064" status="FAIL">
+        <test-method signature="forgotPasswordTest()[pri:2, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:17Z" name="forgotPasswordTest" finished-at="2021-05-19T08:21:32Z" duration-ms="14927" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div.alert.alert-danger.alert-dismissible (tried for 10 second(s) with 500 milliseconds interval)]]>
@@ -62,8 +62,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'FG2000122000', ip: '172.28.32.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /tmp/.com.google.Chrome.FaMzkf}, goog:chromeOptions: {debuggerAddress: localhost:36315}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 4c594b1824191128527eeedfccda7541
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /tmp/.com.google.Chrome.8Gc8E1}, goog:chromeOptions: {debuggerAddress: localhost:45215}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d4394bc4f90cb55714c404b3ea20628e
 *** Element info: {Using=css selector, value=div.alert.alert-danger.alert-dismissible}
 at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -88,7 +88,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPasswordTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:32:07Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-16T15:32:09Z" duration-ms="2251" status="PASS">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:34Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-19T08:21:36Z" duration-ms="2521" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -109,7 +109,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:32:09Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-16T15:32:12Z" duration-ms="2512" status="PASS">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:36Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-19T08:21:39Z" duration-ms="2345" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -130,7 +130,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:32:12Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-16T15:32:14Z" duration-ms="2361" status="PASS">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:39Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-19T08:21:41Z" duration-ms="2311" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -151,7 +151,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:32:14Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-16T15:32:17Z" duration-ms="2606" status="PASS">
+        <test-method signature="loginDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:41Z" name="loginDataDrivenTest" data-provider="getLoginData" finished-at="2021-05-19T08:21:43Z" duration-ms="2299" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -172,11 +172,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDataDrivenTest -->
-        <test-method signature="loginTest()[pri:4, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:32:17Z" name="loginTest" finished-at="2021-05-16T15:32:20Z" duration-ms="3369" status="PASS">
+        <test-method signature="loginTest()[pri:4, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:43Z" name="loginTest" finished-at="2021-05-19T08:21:47Z" duration-ms="3472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.LoginPageTest@244e619a]" started-at="2021-05-16T15:32:20Z" name="tearDown" finished-at="2021-05-16T15:32:20Z" duration-ms="57" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.democart.tests.LoginPageTest@68fe48d7]" started-at="2021-05-19T08:21:47Z" name="tearDown" finished-at="2021-05-19T08:21:47Z" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
