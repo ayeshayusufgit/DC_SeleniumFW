@@ -18,16 +18,24 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.log4testng.Logger;
+
+import com.democart.factory.DriverFactory;
 
 public class ElementUtil {
-
+	
+	private static final Logger LOGGER=Logger.getLogger(ElementUtil.class);
 	private WebDriver driver;
-
+	
+	
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public WebElement getElement(By locator) {
+		LOGGER.info("Locator is:"+locator);
+		WebElement element=driver.findElement(locator);
+		LOGGER.info("Element is:"+element.toString());
 		return driver.findElement(locator);
 	}
 
