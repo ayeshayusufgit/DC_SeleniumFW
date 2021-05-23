@@ -15,26 +15,34 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.log4testng.Logger;
+
+import com.democart.utils.ProfileManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
 	public WebDriver driver;
+	public Properties prop;
 	// Threadlocal concept needs to be applied on WebDriver
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
-	private static final Logger LOGGER=Logger.getLogger(DriverFactory.class);
-	public Properties prop;
+	private static final Logger LOGGER = Logger.getLogger(DriverFactory.class);
+	private ProfileManager profileManager;
 
 	public WebDriver init_driver(Properties prop) {
 		String browserName = prop.getProperty("browser");
 		System.out.println("The browser:" + browserName);
-		LOGGER.info("Browser Name is:"+browserName);
+		LOGGER.info("Browser Name is:" + browserName);
+
+		profileManager = new ProfileManager(prop);
+
 		switch (browserName.trim()) {
 		case "chrome":
 			LOGGER.info("Launching Chrome!");
@@ -42,7 +50,7 @@ public class DriverFactory {
 			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 				init_remoteDriver("chrome");
 			} else {
-				tlDriver.set(new ChromeDriver());
+				tlDriver.set(new ChromeDriver(profileManager.getChromeOptions()));
 			}
 			break;
 
@@ -52,7 +60,7 @@ public class DriverFactory {
 			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 				init_remoteDriver("firefox");
 			} else {
-				tlDriver.set(new FirefoxDriver());
+				tlDriver.set(new FirefoxDriver(profileManager.getFirefoxOptions()));
 			}
 			break;
 
@@ -62,7 +70,7 @@ public class DriverFactory {
 			break;
 
 		default:
-			LOGGER.info("Please pass the right browser:"+browserName);
+			LOGGER.info("Please pass the right browser:" + browserName);
 			System.out.println("Please pass the correct browser name");
 			System.out.println("Pass only chrome|firefox|safari in the config.properties");
 		}
@@ -87,6 +95,7 @@ public class DriverFactory {
 			cap.setCapability("browserName", "chrome");
 			cap.setCapability("browserVersion", "85.0");
 			cap.setCapability("enableVNC", true);
+			cap.setCapability(ChromeOptions.CAPABILITY, profileManager.getChromeOptions());
 
 			try {
 				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
@@ -100,7 +109,8 @@ public class DriverFactory {
 			cap.setCapability("browserName", "firefox");
 			cap.setCapability("browserVersion", "83.0");
 			cap.setCapability("enableVNC", true);
-			
+			cap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, profileManager.getFirefoxOptions());
+
 			try {
 				tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
 				// tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("hubUrl")), cap));
@@ -124,23 +134,23 @@ public class DriverFactory {
 	}
 
 	public static String getBase64Screenshot() throws IOException {
-	    String encodedBase64 = null;
-	    FileInputStream fileInputStream = null;
-	    File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+		String encodedBase64 = null;
+		FileInputStream fileInputStream = null;
+		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String dest = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
-	
-	    File finalDestination = new File(dest);
-	    FileUtils.copyFile(src, finalDestination);
 
-	    try {
-	        fileInputStream =new FileInputStream(finalDestination);
-	        byte[] bytes =new byte[(int)finalDestination.length()];
-	        fileInputStream.read(bytes);
-	        encodedBase64 = new String(Base64.encodeBase64(bytes));
-	    }catch (FileNotFoundException e){
-	        e.printStackTrace();
-	    }
+		File finalDestination = new File(dest);
+		FileUtils.copyFile(src, finalDestination);
 
-	    return encodedBase64;
+		try {
+			fileInputStream = new FileInputStream(finalDestination);
+			byte[] bytes = new byte[(int) finalDestination.length()];
+			fileInputStream.read(bytes);
+			encodedBase64 = new String(Base64.encodeBase64(bytes));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		return encodedBase64;
 	}
 }

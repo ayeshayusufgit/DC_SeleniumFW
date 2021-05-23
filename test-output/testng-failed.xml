@@ -7,7 +7,10 @@
         <methods>
           <include name="accountPageSetup"/>
           <include name="tearDown"/>
-          <include name="searchTest" invocation-numbers="0 4 5"/>
+          <include name="accountsSectionCountTest"/>
+          <include name="searchTest" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="accountsSectionTextTest"/>
+          <include name="accountsPageTitleTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.democart.tests.AccountsPageTest -->
