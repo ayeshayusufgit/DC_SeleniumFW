@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.democart.tests.LoginPageTest">
+      <class name="com.democart.tests.AccountsPageTest">
         <methods>
+          <include name="accountPageSetup"/>
           <include name="tearDown"/>
-          <include name="loginPageSetup"/>
+          <include name="searchTest" invocation-numbers="0 4 5"/>
           <include name="setUp"/>
-          <include name="forgotPasswordTest"/>
         </methods>
-      </class> <!-- com.democart.tests.LoginPageTest -->
+      </class> <!-- com.democart.tests.AccountsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
