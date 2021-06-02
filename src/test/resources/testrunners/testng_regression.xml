@@ -8,6 +8,8 @@
 			class-name="com.democart.listeners.ExtentReportListener" />
 		<listener
 			class-name="com.democart.listeners.AllureReportListener" />
+			<listener
+			class-name="com.democart.listeners.TesultReportListener" />
 	</listeners>
 
 	<!-- Register Page Test -->

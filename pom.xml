@@ -47,6 +47,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M5</version>
 				<configuration>
+					<systemPropertyVariables>
+						<tesultsTarget>token</tesultsTarget>
+					</systemPropertyVariables>
 					<testFailureIgnore>true</testFailureIgnore>
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -166,6 +169,11 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tesults.testng</groupId>
+			<artifactId>tesults-testng</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 	</dependencies>
 </project>

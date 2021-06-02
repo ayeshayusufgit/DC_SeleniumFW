@@ -31,6 +31,7 @@ public class DriverFactory {
 
 	public WebDriver driver;
 	public Properties prop;
+	public static String highlight;
 	// Threadlocal concept needs to be applied on WebDriver
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 	private static final Logger LOGGER = Logger.getLogger(DriverFactory.class);
@@ -41,6 +42,9 @@ public class DriverFactory {
 		System.out.println("The browser:" + browserName);
 		LOGGER.info("Browser Name is:" + browserName);
 
+		highlight = prop.getProperty("highlight");
+		System.out.println("Highlight is:" + true);
+		
 		profileManager = new ProfileManager(prop);
 
 		switch (browserName.trim()) {

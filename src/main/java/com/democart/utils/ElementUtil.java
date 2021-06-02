@@ -3,7 +3,6 @@ package com.democart.utils;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -23,19 +22,24 @@ import org.testng.log4testng.Logger;
 import com.democart.factory.DriverFactory;
 
 public class ElementUtil {
-	
-	private static final Logger LOGGER=Logger.getLogger(ElementUtil.class);
+
+	private static final Logger LOGGER = Logger.getLogger(ElementUtil.class);
 	private WebDriver driver;
-	
-	
+	private JavaScriptUtil jsUtil;
+
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
+		jsUtil = new JavaScriptUtil(driver);
 	}
 
 	public WebElement getElement(By locator) {
-		LOGGER.info("Locator is:"+locator);
-		WebElement element=driver.findElement(locator);
-		LOGGER.info("Element is:"+element.toString());
+		LOGGER.info("Locator is:" + locator);
+		WebElement element = driver.findElement(locator);
+		LOGGER.info("Element is:" + element.toString());
+		
+		if (DriverFactory.highlight.equals("true")) {
+			jsUtil.flash(element);
+		}
 		return driver.findElement(locator);
 	}
 
@@ -78,7 +82,7 @@ public class ElementUtil {
 	public boolean doIsDisplayed(By locator) {
 		return getElement(locator).isDisplayed();
 	}
-	
+
 	public boolean doIsSelected(By locator) {
 		return getElement(locator).isSelected();
 	}
